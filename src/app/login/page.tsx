@@ -8,19 +8,19 @@ const AuthPage = () => {
     return (
         <div className="relative bg-[#03030C] min-h-screen w-full overflow-hidden flex">
             <div className='border-2 relative m-3 rounded-3xl shadow-white border-white/5'>
-                <img src="/bg.png" className="w-[44rem] h-[44rem]  rounded-3xl  mask-b-from-20% mask-b-to-80%" />
-                <h2 className="absolute bottom-12 left-10 text-3xl font-medium max-w-[300px] mx-auto text-transparent tracking-tight bg-clip-text bg-gradient-to-r from-neutral-300 to-neutral-600 z-10">
+                <img src="/bg.png" className="w-[48rem] h-[44rem]  rounded-3xl  mask-b-from-20% mask-b-to-80%" />
+                <h2 className="absolute bottom-12 left-10 text-2xl font-medium max-w-[240px] mx-auto text-transparent tracking-tight bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 z-10">
                     Be a part of something amazing
                 </h2>
             </div>
 
-            <div className='flex justify-center items-center flex-col flex-1  max-w-sm mx-auto '>
+            <div className='flex mt-40 items-center flex-col flex-1  max-w-sm mx-auto '>
                 {authPage == "signin" ? <h1 className='text-xl text-white font-normal tracking-tighter'>Sign In to your Account</h1> :
                     <h1 className='text-xl text-white font-normal tracking-tighter'>Log in to your account</h1>}
-                <p className='text-sm text-neutral-600 py-px'>Enter your details to continue!</p>
+                <p className='text-sm text-neutral-600 py-1'>Enter your details to continue!</p>
                 <div className='bg-white/5 border border-white/10 flex text-white gap-3  rounded-lg my-4 text-sm transition duration-200'>
-                    <div onClick={() => setAuthPage("signin")} className={cn(authPage === "signin" && "bg-[#646468]/50 rounded-lg shadow-md", " p-2 ")}>Sign in</div>
-                    < div onClick={() => setAuthPage("login")} className={cn(authPage === "login" && "bg-[#646468]/50 rounded-lg shadow-md", " p-2 cursor-pointer ")} > Log in</div>
+                    <div onClick={() => setAuthPage("signin")} className={cn(authPage === "signin" && "bg-[#646468]/50 rounded-lg shadow-md", " py-2 px-4 cursor-pointer")}>Sign in</div>
+                    < div onClick={() => setAuthPage("login")} className={cn(authPage === "login" && "bg-[#646468]/50 rounded-lg shadow-md", " py-2 px-5 cursor-pointer ")} > Log in</div>
                 </div>
                 {authPage == 'signin' ? <Signin /> : <Login />}
                 <button className='text-white bg-gradient-to-b from-[#5F4AE8] text-sm to-[#432AE4] w-[calc(100%-1.2rem)] py-2 rounded-lg mx-10 my-4'>Submit</button>
