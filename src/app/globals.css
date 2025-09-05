@@ -5,6 +5,9 @@
   0px 2px 3px -1px rgba(0, 0, 0, 0.1),
   0px 1px 0px 0px rgba(25, 28, 33, 0.02),
   0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --shadow-button:0px 1px 1px rgba(255, 255, 255, 0.45) inset,
+    0px -1px 4px  rgba(0, 0, 0, 0.1) inset,
+    0px 9px 7px  rgba(255, 255, 255, 0.04) inset;
   
   --color-back:rgba(253, 253, 253, 0.10);
   --color-side:rgba(253, 253, 253, 0.1);

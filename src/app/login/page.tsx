@@ -1,6 +1,7 @@
 'use client'
 import { cn } from '@/lib/cn'
 import React, { useState } from 'react'
+import { motion } from "motion/react"
 
 const AuthPage = () => {
     type authPage = 'signin' | 'login'
@@ -23,7 +24,7 @@ const AuthPage = () => {
                     < div onClick={() => setAuthPage("login")} className={cn(authPage === "login" && "bg-[#646468]/50 rounded-lg shadow-md", " py-2 px-5 cursor-pointer ")} > Log in</div>
                 </div>
                 {authPage == 'signin' ? <Signin /> : <Login />}
-                <button className='text-white bg-gradient-to-b from-[#5F4AE8] text-sm to-[#432AE4] w-[calc(100%-1.2rem)] py-2 rounded-lg mx-10 my-4'>Submit</button>
+                <button className='shadow-button text-white bg-gradient-to-b from-[#5F4AE8] text-sm to-[#432AE4] w-[calc(100%-1.2rem)] py-2 rounded-lg mx-10 my-4'>Submit</button>
             </div>
 
         </div >
@@ -46,12 +47,12 @@ const Signin = () => {
             <Group>
                 <Label htmlFor='email'
                 >Email</Label>
-                <Input name='email' type='text' placeholder='Enter your name' />
+                <Input name='email' type='text' placeholder='Enter your email' />
             </Group>
             <Group>
                 <Label htmlFor='password'
                 >Password</Label>
-                <Input name='password' type='text' placeholder='Enter your name' />
+                <Input name='password' type='text' placeholder='Enter your password' />
             </Group>
         </div>
     )
@@ -63,12 +64,12 @@ const Login = () => {
             <Group>
                 <Label htmlFor='email'
                 >Email</Label>
-                <Input name='email' type='email' placeholder='Enter your name' className='invalid:border-red-500' />
+                <Input name='email' type='email' placeholder='Enter your email' className='invalid:border-red-500' />
             </Group>
             <Group>
                 <Label htmlFor='password'
                 >Password</Label>
-                <Input name='password' type='text' placeholder='Enter your name' />
+                <Input name='password' type='text' placeholder='Enter your password' />
             </Group>
         </div>
     )
